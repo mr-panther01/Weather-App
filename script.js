@@ -18,7 +18,7 @@ function searchFn(event) {
 }
 
 async function fetchData(target) {
-    let endpoint = `http://api.weatherapi.com/v1/current.json?key=f3c4cf44c66243b39ee51501250602&q=${target}&aqi=no`;
+    let endpoint = `https://api.weatherapi.com/v1/current.json?key=f3c4cf44c66243b39ee51501250602&q=${target}&aqi=no`;
 
     const response = await fetch(endpoint);
     const data = await response.json();
