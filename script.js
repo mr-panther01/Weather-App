@@ -18,7 +18,7 @@ function searchFn(event) {
 }
 
 async function fetchData(target) {
-    let endpoint = `https://api.weatherapi.com/v1/current.json?key=f3c4cf44c66243b39ee51501250602&q=Mumbai&aqi=no`;
+    let endpoint = `https://api.weatherapi.com/v1/current.json?key=f3c4cf44c66243b39ee51501250602&q=${target}&aqi=no`;
 
     const response = await fetch(endpoint);
     const data = await response.json();
@@ -38,6 +38,11 @@ async function fetchData(target) {
 
     temperatureField.textContent = `${Tempc}°C`;
     conditionField.textContent = condition;
+    timeandDateField.textContent = Time;
+    locationField.textContent = cityName;
+    weatherIcon.src = conditionIcon;
+}
+
     timeandDateField.textContent = Time;
     locationField.textContent = cityName;
     weatherIcon.src = conditionIcon;
