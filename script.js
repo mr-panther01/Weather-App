@@ -42,8 +42,3 @@ async function fetchData(target) {
     locationField.textContent = cityName;
     weatherIcon.src = conditionIcon;
 }
-
-    timeandDateField.textContent = Time;
-    locationField.textContent = cityName;
-    weatherIcon.src = conditionIcon;
-}
